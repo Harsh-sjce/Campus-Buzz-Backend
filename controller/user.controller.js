@@ -15,13 +15,13 @@ export const register = async (req, res) => {
         message: "Invalid photo format. Only jpg and png are allowed",
       });
     }
-    const { email, name, password, phone, education, role } = req.body;
+    const { email, name, password, phone, club, role } = req.body;
     if (
       !email ||
       !name ||
       !password ||
       !phone ||
-      !education ||
+      !club ||
       !role ||
       !photo
     ) {
@@ -45,7 +45,7 @@ export const register = async (req, res) => {
       name,
       password: hashedPassword,
       phone,
-      education,
+      club,
       role,
       photo: {
         public_id: cloudinaryResponse.public_id,
@@ -64,7 +64,7 @@ export const register = async (req, res) => {
           name: newUser.name,
           email: newUser.email,
           role: newUser.role,
-          education: newUser.education,
+          club: newUser.club,
           avatar: newUser.avatar,
           createdOn: newUser.createdOn,
         },

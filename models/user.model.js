@@ -26,7 +26,7 @@ const userSchema = new mongoose.Schema({
       required: true,
     },
   },
-  education: {
+  club: {
     type: String,
     required: true,
   },
