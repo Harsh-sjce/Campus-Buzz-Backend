@@ -32,7 +32,7 @@ app.use(
 
 // DB Code
 try {
-  mongoose.connect(MONOGO_URL);
+  mongoose.connect(MONOGO_URI);
   console.log("Conntected to MonogDB");
 } catch (error) {
   console.log(error);
