@@ -18,7 +18,7 @@ const MONOGO_URL = process.env.MONOGO_URI;
 app.use(express.json());
 app.use(cookieParser());
 app.use(cors({
-  origin: process.env.FRONTED_URL, // Adjust this to your frontend URL
+  origin: process.env.FRONTEND_URL, // Adjust this to your frontend URL
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true
 }));
